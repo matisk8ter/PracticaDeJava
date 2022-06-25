@@ -1,7 +1,6 @@
 package com.practicoJava;
 
 
-
 import java.text.Collator;
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -116,10 +115,22 @@ public class Main {
 
         //----------EJERCICIO 12----------
 
-        System.out.println("ingrese la primera palabra");
-        String palabra1 = entrada.nextLine();
-        System.out.println("ingrese una segunda palabra");
-        String palabra2 = entrada.nextLine();
+//        System.out.println("ingrese la primera palabra");
+//        String palabra1 = entrada.nextLine();
+//        System.out.println("ingrese una segunda palabra");
+//        String palabra2 = entrada.nextLine();
+//        if (palabra1.equals(palabra2)) {
+//            System.out.println("son iguales");
+//        } else {
+//            if (palabra1.length() < palabra2.length()) {
+//                System.out.println("La palabra: " + "'"+ palabra1 +"'"+ " contiene menos caracteres que la palabra: "+ "'" + palabra2 + "'");
+//            } else if(palabra1.length() > palabra2.length()){
+//                System.out.println("La palabra: " + "'"+ palabra1 +"'"+ " contiene mas caracteres que la palabra: "+"'" + palabra2+"'" );
+//            }else{
+//                System.out.println("contienen la misma cantidad de caracteres pero son diferentes");
+//            }
+//
+//        }
 
 
         //----------EJERCICIO 13----------
@@ -129,17 +140,11 @@ public class Main {
 
         //----------Ejercicio 15----------
 
-//        System.out.println(
-//                "****** GESTION CINEMATOGRÁFICA ********\n" +
-//                "1-NUEVO ACTOR\n" +
-//                "2-BUSCAR ACTOR\n" +
-//                "3-ELIMINAR ACTOR\n" +
-//                "4-MODIFICAR ACTOR\n" +
-//                "5-VER TODOS LOS ACTORES\n" +
-//                "6- VER PELICULAS DE LOS ACTORES\n" +
-//                "\n" +
-//                "7-VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES\n" +
-//                "8-SALIR");
+
+
+
+
+
 
     }
 }
