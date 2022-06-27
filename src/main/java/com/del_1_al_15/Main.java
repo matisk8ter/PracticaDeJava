@@ -1,7 +1,13 @@
-package com.practicoJava;
+package com.del_1_al_15;
 
 
-import java.text.Collator;
+
+
+
+import java.util.Locale;
+
+
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -19,6 +25,7 @@ public class Main {
         Scanner entrada = new Scanner(System.in);
         Main app = new Main();
 
+
         //----------EJERCICIO 1 Y 2----------
 //        int n1,n2;
 //        System.out.println("ingrese el primer valor");
@@ -26,7 +33,6 @@ public class Main {
 //        System.out.println("ingrese el segundo valor");
 //        n2 = entrada.nextInt();
 //        System.out.println("El numero mayor es: " + Math.max(n1,n2));
-
 
         //----------EJERCICIO 3----------
 //        System.out.println("ingrese un valor");
@@ -37,7 +43,7 @@ public class Main {
         //----------EJERCICIO 4----------
 //        System.out.println("ingrese un precio");
 //        double precio = entrada.nextDouble();
-//        final double IVA = precio * 0.21;
+//        double IVA = precio * 0.21;
 //        double total = precio + IVA;
 //        System.out.println("el total es: " + total);
 
@@ -114,36 +120,107 @@ public class Main {
 
 
         //----------EJERCICIO 12----------
-
+//        String cadenaDeCaracteresPalabra1 = "";
+//        String cadenaDeCaracteresPalabra2 = "";
 //        System.out.println("ingrese la primera palabra");
 //        String palabra1 = entrada.nextLine();
 //        System.out.println("ingrese una segunda palabra");
 //        String palabra2 = entrada.nextLine();
 //        if (palabra1.equals(palabra2)) {
 //            System.out.println("son iguales");
-//        } else {
-//            if (palabra1.length() < palabra2.length()) {
-//                System.out.println("La palabra: " + "'"+ palabra1 +"'"+ " contiene menos caracteres que la palabra: "+ "'" + palabra2 + "'");
-//            } else if(palabra1.length() > palabra2.length()){
-//                System.out.println("La palabra: " + "'"+ palabra1 +"'"+ " contiene mas caracteres que la palabra: "+"'" + palabra2+"'" );
-//            }else{
-//                System.out.println("contienen la misma cantidad de caracteres pero son diferentes");
+//        } else if (palabra1.length() <= palabra2.length()){
+//            for(int i =0; i< palabra1.length(); i++){
+//                char letraP1 = palabra1.charAt(i);
+//                char letraP2 = palabra2.charAt(i);
+//                if ( letraP1 == letraP2){
+//                    cadenaDeCaracteresPalabra1 += " Iguales: " +letraP1;
+//                    cadenaDeCaracteresPalabra2 += " Iguales: " +letraP2;
+//                }else{
+//                    cadenaDeCaracteresPalabra1 += " Diferentes: " +letraP1;
+//                    cadenaDeCaracteresPalabra2 += " Diferentes: " +letraP2;
+//                }
 //            }
+//            System.out.println(cadenaDeCaracteresPalabra1);
+//            System.out.println(cadenaDeCaracteresPalabra2);
 //
+//
+//        }else if (palabra1.length() >= palabra2.length()){
+//            for(int i =0; i< palabra2.length(); i++){
+//                char letraP1 = palabra1.charAt(i);
+//                char letraP2 = palabra2.charAt(i);
+//                if ( letraP1 == letraP2){
+//                    cadenaDeCaracteresPalabra1 += "Iguales: " +letraP1;
+//                    cadenaDeCaracteresPalabra2 += "Iguales: " +letraP2;
+//                }else{
+//                    cadenaDeCaracteresPalabra1 += "Diferentes: " +letraP1;
+//                    cadenaDeCaracteresPalabra2 += "Diferentes: " +letraP2;
+//                }
+//            }
+//            System.out.println(cadenaDeCaracteresPalabra1);
+//            System.out.println(cadenaDeCaracteresPalabra2);
 //        }
 
-
         //----------EJERCICIO 13----------
+
+//        LocalDate fecha = LocalDate.now();
+//        LocalTime hora = LocalTime.now();
+//        System.out.println("La fecha actual es: "+fecha +" hora: " + hora);
 
 
         //----------EJERCICIO 14----------
 
+//        System.out.println("ingrese un numero");
+//        int numero = entrada.nextInt();
+//        for (int i = numero;i<=1000;i+=2){
+//            System.out.println(i);
+//        }
+
         //----------Ejercicio 15----------
-
-
-
-
-
+//        int numero;
+//        System.out.println("" +
+//                "****** GESTION CINEMATOGRAFICA ********\n" +
+//                "1-NUEVO ACTOR\n" +
+//                "2-BUSCAR ACTOR\n" +
+//                "3-ELIMINAR ACTOR\n" +
+//                "4-MODIFICAR ACTOR\n" +
+//                "5-VER TODOS LOS ACTORES\n" +
+//                "6- VER PELICULAS DE LOS ACTORES\n" +
+//                "7-VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES\n" +
+//                "8-SALIR");
+//
+//        do {
+//            System.out.println("ingrese una opción");
+//            numero = entrada.nextInt();
+//            switch (numero){
+//                case 1 :
+//                    System.out.println("Nuevo Actor");
+//                    break;
+//                case 2 :
+//                    System.out.println("BUSCAR ACTOR");
+//                    break;
+//                case 3 :
+//                    System.out.println("ELIMINAR ACTOR");
+//                    break;
+//                case 4 :
+//                    System.out.println("MODIFICAR ACTOR");
+//                    break;
+//                case 5:
+//                    System.out.println("VER TODOS LOS ACTORES");
+//                    break;
+//                case 6 :
+//                    System.out.println("VER PELICULAS DE LOS ACTORES");
+//                    break;
+//                case 7 :
+//                    System.out.println("VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES");
+//                    break;
+//                case 8:break;
+//                default:
+//                    System.out.println("error de opcion");
+//                    System.out.println("menu");
+//            }
+//            System.out.println("digite 8 si desea salir");
+//
+//        }while (numero != 8) ;
 
 
     }
