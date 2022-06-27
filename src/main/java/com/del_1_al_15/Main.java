@@ -68,7 +68,7 @@ public class Main {
 //        do {
 //            System.out.println("ingrese un numero");
 //            numero = entrada.nextInt();
-//        }while (numero<0);
+//        }while (numero>0);
 
         //----------EJERCICIO 8----------
 //        System.out.println("ingrese un dia");
@@ -126,6 +126,7 @@ public class Main {
 //        String palabra1 = entrada.nextLine();
 //        System.out.println("ingrese una segunda palabra");
 //        String palabra2 = entrada.nextLine();
+//
 //        if (palabra1.equals(palabra2)) {
 //            System.out.println("son iguales");
 //        } else if (palabra1.length() <= palabra2.length()){

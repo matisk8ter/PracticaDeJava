@@ -8,6 +8,8 @@ public class Persona {
     private double peso = 0;
     private double altura = 0;
 
+    public static final char HOMBRE = 'H';
+    public static final char MUJER = 'M';
     public static final int PESO_MENOR = -1;
     public static final int PESO_IDEAL = 0;
     public static final int PESO_SOBREPESO = 1;
@@ -26,7 +28,7 @@ public class Persona {
     public Persona(String nombre, int edad, char sexo) {
         this.nombre = nombre;
         this.edad = edad;
-        this.sexo = sexo;
+        this.sexo = comprobarSexo(sexo);
         this.DNI = generateDNI();
         this.peso = 0;
         this.altura = 0;
@@ -36,28 +38,23 @@ public class Persona {
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
-        this.DNI = this.generateDNI();
-        this.sexo = sexo;
+        this.DNI = generateDNI();
+        this.sexo = comprobarSexo(sexo);
         this.peso = peso;
         this.altura = altura;
     }
 
     public int calcularIMC(){
         double imc = this.peso/(Math.pow(this.altura,2));
-        if (imc<20){return PESO_MENOR;}
-        if(imc>=20 && imc<=25){return PESO_IDEAL;}
-        if(imc>25){return PESO_SOBREPESO;}
-        return 2;
+        return (imc<20)? PESO_MENOR:(imc>=20 && imc<=25)? PESO_IDEAL:PESO_SOBREPESO;
     }
 
     public Boolean esMayorDeEdad(){
         int mayor = this.edad;
         return mayor >= 18;
     }
-    public void comprobarSexo(char sexo){
-        if(sexo == 'H'){
-            this.sexo = 'H';
-        }
+    private static char comprobarSexo(char sexo){
+        return sexo == HOMBRE || sexo == MUJER? sexo: HOMBRE;
     }
 
     @Override
