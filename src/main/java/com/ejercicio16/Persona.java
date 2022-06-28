@@ -17,11 +17,7 @@ public class Persona {
 
     //constructor por defecto
     public Persona() {
-        this.nombre = "";
-        this.edad = 0;
         this.DNI = generateDNI();
-        this.peso = 0;
-        this.altura = 0;
     }
 
     //constructor nombre, edad y sexo
@@ -30,8 +26,7 @@ public class Persona {
         this.edad = edad;
         this.sexo = comprobarSexo(sexo);
         this.DNI = generateDNI();
-        this.peso = 0;
-        this.altura = 0;
+
     }
 
     //constructor con todos los atributos

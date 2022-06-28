@@ -2,9 +2,12 @@ package com.ejercicio18;
 
 public class Serie implements Entregable {
 
+    private final int NUMEOTEMPORADAS = 3;
+    private final boolean ENTREGADO = false;
+
     private String titulo;
-    private int numTemporada = 3;
-    private boolean entregado = false;
+    private int numTemporada = NUMEOTEMPORADAS;
+    private boolean entregado = ENTREGADO;
     private String genero;
     private String creador;
 
@@ -14,8 +17,7 @@ public class Serie implements Entregable {
     public Serie(String titulo, String creador) {
         this.titulo = titulo;
         this.creador = creador;
-        this.numTemporada = 3;
-        this.entregado = false;
+
     }
 
     public Serie(String titulo, int numTemporada, String genero, String creador) {
@@ -23,7 +25,7 @@ public class Serie implements Entregable {
         this.numTemporada = numTemporada;
         this.genero = genero;
         this.creador = creador;
-        this.entregado = false;
+
     }
 
     public String getTitulo() {

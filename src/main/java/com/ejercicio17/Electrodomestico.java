@@ -1,29 +1,35 @@
 package com.ejercicio17;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Electrodomestico {
 
-    private final double precioBase = 100;
-    private double precioVariable;
-    private String color = "blanco";
-    private char consumoEnergetico = 'F';
-    private double peso = 5;
+
+    private final double PRECIOBASE = 100;
+    private final String COLORBASE = "blanco";
+    private final char CONSUMOENERGETICOBASE = 'F';
+    private final double PESOBASE = 5;
+
+
+    private double precioVariable = PRECIOBASE;
+    private String color = COLORBASE ;
+    private char consumoEnergetico = CONSUMOENERGETICOBASE;
+    private double peso = PESOBASE;
 
     public Electrodomestico() {
+
     }
 
     public Electrodomestico(double precioVariable, double peso) {
         this.precioVariable = precioVariable;
         this.peso = peso;
-        this.color = "blanco";
-        this.consumoEnergetico = 'F';
     }
 
     public Electrodomestico(double precioVariable, String color, char consumoEnergetico, double peso) {
         this.precioVariable = precioVariable;
-        this.color = color;
-        this.consumoEnergetico = consumoEnergetico;
+        this.color = comprobarColor(color);
+        this.consumoEnergetico = comprobarConsumoEnergico(consumoEnergetico);
         this.peso = peso;
     }
 
@@ -32,7 +38,7 @@ public class Electrodomestico {
     }
 
     public double getPrecioBase() {
-        return precioBase;
+        return PRECIOBASE;
     }
 
     public String getColor() {
@@ -48,8 +54,8 @@ public class Electrodomestico {
     }
 
     private char comprobarConsumoEnergico(char letra) {
-        char letraPorDefecto = 'F';
-        return ((int) letra >= 65 && (int) letra <= 70) ? letraPorDefecto = letra : letraPorDefecto;
+
+        return ((int) letra >= 65 && (int) letra <= 70) ? letra : CONSUMOENERGETICOBASE;
     }
 
 
@@ -57,41 +63,29 @@ public class Electrodomestico {
     public static String coloresDisponibles[] = {"blanco", "negro", "rojo", "azul", "gris"};
 
     public String comprobarColor(String color) {
-        String colorPorDefecto = "blanco";
         int indice = Arrays.asList(coloresDisponibles).indexOf(color);
-        return indice >= 0 ? colorPorDefecto = coloresDisponibles[indice] : colorPorDefecto;
+        return indice >= 0 ?  coloresDisponibles[indice] : COLORBASE;
 
     }
 
+    public static HashMap<String,Integer> mapConsumo = new HashMap<>();
+    static{
+        mapConsumo.put("A",100);
+        mapConsumo.put("B",80);
+        mapConsumo.put("C",60);
+        mapConsumo.put("D",50);
+        mapConsumo.put("E",30);
+        mapConsumo.put("F",10);
+    }
+    public double precioFinal(){
+        double precioFinal = this.PRECIOBASE;
+        double precioDeConsumo =  mapConsumo.get(String.valueOf(this.consumoEnergetico));
 
-    public double precioFinal() {
-        double precioFinal = this.precioBase;
-        switch (this.consumoEnergetico) {
-            case 'A':
-                precioFinal += 100;
-                break;
-            case 'B':
-                precioFinal += 80;
-                break;
-            case 'C':
-                precioFinal += 60;
-                break;
-            case 'D':
-                precioFinal += 50;
-                break;
-            case 'E':
-                precioFinal += 30;
-                break;
-            case 'F':
-                precioFinal += 10;
-                break;
-        }
         if (this.peso >= 0 && this.peso <= 19) precioFinal += 10;
         if (this.peso >= 50 && this.peso <= 49) precioFinal += 80;
         if (this.peso > 80) precioFinal += 100;
 
-        return precioFinal + this.precioVariable;
-
+        return precioFinal + this.precioVariable + precioDeConsumo;
     }
 
 
