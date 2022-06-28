@@ -9,8 +9,6 @@ public class Serie implements Entregable {
     private String creador;
 
     public Serie() {
-        this.numTemporada = 3;
-        this.entregado = false;
     }
 
     public Serie(String titulo, String creador) {

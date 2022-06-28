@@ -1,34 +1,34 @@
 package com.ejercicio17;
 
-import java.sql.Array;
 import java.util.Arrays;
 
 public class Electrodomestico {
 
-    private double precioBase = 100;
-    private String color = "blaco";
+    private final double precioBase = 100;
+    private double precioVariable;
+    private String color = "blanco";
     private char consumoEnergetico = 'F';
     private double peso = 5;
 
     public Electrodomestico() {
-        this.precioBase = 100;
-        this.color = "blanco";
-        this.consumoEnergetico = 'F';
-        this.peso = 5;
     }
 
-    public Electrodomestico(double precioBase, double peso) {
-        this.precioBase = precioBase;
+    public Electrodomestico(double precioVariable, double peso) {
+        this.precioVariable = precioVariable;
         this.peso = peso;
         this.color = "blanco";
         this.consumoEnergetico = 'F';
     }
 
-    public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
-        this.precioBase = precioBase;
+    public Electrodomestico(double precioVariable, String color, char consumoEnergetico, double peso) {
+        this.precioVariable = precioVariable;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
+    }
+
+    public double getPrecioVariable() {
+        return precioVariable;
     }
 
     public double getPrecioBase() {
@@ -86,10 +86,11 @@ public class Electrodomestico {
                 precioFinal += 10;
                 break;
         }
-        return (this.peso >= 0 && this.peso <= 19) ? precioFinal += 10 :
-                (this.peso >= 50 && this.peso <= 49) ? precioFinal += 80 :
-                        (this.peso > 80) ? precioFinal += 100 : precioFinal;
+        if (this.peso >= 0 && this.peso <= 19) precioFinal += 10;
+        if (this.peso >= 50 && this.peso <= 49) precioFinal += 80;
+        if (this.peso > 80) precioFinal += 100;
 
+        return precioFinal + this.precioVariable;
 
     }
 

@@ -10,8 +10,6 @@ public class VideoJuego implements Entregable {
 
 
     public VideoJuego() {
-        this.horasEstimadas = 10;
-        this.entregado = false;
     }
 
     public VideoJuego(String titulo, int horasEstimadas) {
