@@ -63,6 +63,7 @@ public class Electrodomestico {
 
     }
 
+
     public double precioFinal() {
         double precioFinal = this.precioBase;
         switch (this.consumoEnergetico) {
