@@ -19,8 +19,10 @@ public class Ejercicio12 {
             System.out.println("son iguales");
         } else if (palabra1.length() <= palabra2.length()) {
             for (int i = 0; i < palabra1.length(); i++) {
-                char letraP1 = palabra1.charAt(i);
-                char letraP2 = palabra2.charAt(i);
+
+                char letraP1 = palabra1.charAt(i);//hola
+                char letraP2 = palabra2.charAt(i);//mundo
+
                 if (letraP1 == letraP2) {
                     cadenaDeCaracteresPalabra1 += " Iguales: " + letraP1;
                     cadenaDeCaracteresPalabra2 += " Iguales: " + letraP2;
@@ -31,7 +33,6 @@ public class Ejercicio12 {
             }
             System.out.println(cadenaDeCaracteresPalabra1);
             System.out.println(cadenaDeCaracteresPalabra2);
-
 
         } else if (palabra1.length() >= palabra2.length()) {
             for (int i = 0; i < palabra2.length(); i++) {
@@ -44,6 +45,7 @@ public class Ejercicio12 {
                     cadenaDeCaracteresPalabra1 += "Diferentes: " + letraP1;
                     cadenaDeCaracteresPalabra2 += "Diferentes: " + letraP2;
                 }
+
             }
             System.out.println(cadenaDeCaracteresPalabra1);
             System.out.println(cadenaDeCaracteresPalabra2);

@@ -17,6 +17,7 @@ public class Ejecutable {
         electrodomesticos.add(new Televisor(300, 50));
         electrodomesticos.add(new Televisor(300, "blanco", 'F', 35, 69, false));
         electrodomesticos.add(new Televisor(500, "blanco", 'A', 40, 15, true));
+
         int precioTv = 0;
         int precioLava = 0;
         int precioElect = 0;
@@ -25,8 +26,8 @@ public class Ejecutable {
             if (element instanceof Televisor) precioTv += element.precioFinal();
             else if (element instanceof Lavadora) precioLava += element.precioFinal();
             else precioElect += element.precioFinal();
-
         }
+
         System.out.println(electrodomesticos.get(5));
         System.out.println("Precio final de Lavadoras: "+precioLava);
         System.out.println("Precio final de las Televisiones: "+precioTv);

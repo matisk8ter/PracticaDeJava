@@ -3,8 +3,8 @@ package com.ejercicio16;
 public class Persona {
     private String nombre = "";
     private int edad = 0;
-    private String DNI;
-    private char sexo = 'H';
+    private String DNI = generateDNI();
+    private char sexo = HOMBRE;
     private double peso = 0;
     private double altura = 0;
 
@@ -51,17 +51,16 @@ public class Persona {
     private static char comprobarSexo(char sexo){
         return sexo == HOMBRE || sexo == MUJER? sexo: HOMBRE;
     }
-
     @Override
     public String toString() {
         return  "\n"+
                 "------INFORMACION----- "+ "\n"+
-                "nombre = " + this.nombre + "\n" +
-                "edad = " + this.edad + "\n"+
-                "dni = " + this.DNI + "\n"+
-                "sexo = " + this.sexo + "\n"+
-                "peso = " + this.peso +"\n"+
-                "altura = " + this.altura +
+                "nombre = " + nombre + "\n" +
+                "edad = " + edad + "\n"+
+                "dni = " + DNI + "\n"+
+                "sexo = " + sexo + "\n"+
+                "peso = " + peso +"\n"+
+                "altura = " + altura +
                 '}';
     }
 
@@ -69,7 +68,7 @@ public class Persona {
     //GENERO EL NUMERO DE 8 CIFRAS
     public int generateNumeroDNI(){
         double dni = 10000000 + Math.random() * 90000000;
-        return (int)dni;
+        return (int)dni;//casting
     }
     //genero una letra aleatoria partiendo de un numero de DNI
     public char generateLetra(int nmero) {
@@ -94,7 +93,7 @@ public class Persona {
     }
 
     public void setSexo(char sexo) {
-        this.sexo = sexo;
+        this.sexo = comprobarSexo(sexo);
     }
 
     public void setPeso(double peso) {

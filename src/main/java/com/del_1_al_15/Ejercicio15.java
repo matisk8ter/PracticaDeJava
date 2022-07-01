@@ -47,9 +47,9 @@ public class Ejercicio15 {
                     break;
                 default:
                     System.out.println("error de opcion");
-                    System.out.println("menu");
+
             }
-            System.out.println("digite 8 si desea salir");
+
 
         } while (numero != 8);
     }

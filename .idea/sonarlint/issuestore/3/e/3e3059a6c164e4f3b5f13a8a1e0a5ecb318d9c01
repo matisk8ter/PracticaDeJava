@@ -1,0 +1,8 @@
+
+]
+java:S1192"GDefine a constant instead of duplicating this literal "blanco" 3 times.(ûµè’
+S	java:S106"9Replace this use of System.out or System.err by a logger.(°øìÑıÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(äàç
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(ö¿Áùÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(”ûò–øÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(ºÄ·Íüÿÿÿÿ
