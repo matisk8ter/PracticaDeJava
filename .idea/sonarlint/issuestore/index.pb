@@ -3,8 +3,6 @@
 -src/main/java/com/del_1_al_15/Ejercicio8.java,c\8\c86b38f80d7ab2df0d187440744fdb41bdcb7995
 ]
 -src/main/java/com/del_1_al_15/Ejercicio7.java,c\1\c13b5fec7bc03722555ebecd0a25bded745a68fb
-]
--src/main/java/com/ejercicio18/Entregable.java,9\2\92c5b4bb4034d3be83390d869a35a4c3405a45dd
 _
 /src/main/java/com/del_1_al_15/Ejercicio1y2.java,9\1\9128332b88aecd5a08be2268663b0a9248909a83
 ]

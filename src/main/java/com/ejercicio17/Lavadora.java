@@ -7,8 +7,8 @@ public class Lavadora extends Electrodomestico {
     public Lavadora() {
     }
 
-    public Lavadora(double precioBase, double peso) {
-        super(precioBase, peso);
+    public Lavadora(double precioVariable, double peso) {
+        super(precioVariable, peso);
 
     }
 
