@@ -6,16 +6,16 @@ import java.util.HashMap;
 public class Electrodomestico {
 
 
-    private final double PRECIOBASE = 100;
-    private final String COLORBASE = "blanco";
-    private final char CONSUMOENERGETICOBASE = 'F';
-    private final double PESOBASE = 5;
+    private static final double PRECIOBASE = 100;
+    private static final String COLORBASE = "blanco";
+    private static final char CONSUMOENERGETICOBASE = 'F';
+    private static final double PESOBASE = 5;
 
 
-    private double precioVariable = PRECIOBASE;
-    private String color = COLORBASE ;
-    private char consumoEnergetico = CONSUMOENERGETICOBASE;
-    private double peso = PESOBASE;
+    protected double precioVariable = PRECIOBASE;
+    protected String color = COLORBASE ;
+    protected char consumoEnergetico = CONSUMOENERGETICOBASE;
+    protected double peso = PESOBASE;
 
     public Electrodomestico() {
 
@@ -82,7 +82,8 @@ public class Electrodomestico {
         double precioDeConsumo =  mapConsumo.get(String.valueOf(this.consumoEnergetico));
 
         if (this.peso >= 0 && this.peso <= 19) precioFinal += 10;
-        if (this.peso >= 50 && this.peso <= 49) precioFinal += 80;
+        if (this.peso >= 20 && this.peso <= 49) precioFinal += 50;
+        if (this.peso >= 50 && this.peso <= 79) precioFinal += 80;
         if (this.peso > 80) precioFinal += 100;
 
         return precioFinal + this.precioVariable + precioDeConsumo;
